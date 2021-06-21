@@ -65,7 +65,7 @@ The sample Stages we will create include:
 
 5. Click ![image](../images/ICON_Save.png) to save the new Task.
 
-6. Create another Task under the same Stage: **Case Owner Review**. Assign it to the **Role** of **Case_Owner**. This is also a manual Task that should be executed after the legal review is complete. Therefore, set the **Task Order** to **2**, and give it a **Task Deadline** of **24** hours. 
+6. Create another Task under the same Stage: **Review & Approval**. Assign it to the **Role** of **Case_Owner**. This is also a manual Task that should be executed after the legal review is complete. Therefore, set the **Task Order** to **2**, and give it a **Task Deadline** of **24** hours. 
 
 
 ![image](../images/01_02_03_DSAR_Review_Approval_Case_Owner.png)

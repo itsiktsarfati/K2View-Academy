@@ -11,7 +11,7 @@ The sample Stages we will create include:
 
 ### Data Collection
 
-1. Create a new Stage called **Data Collection**.
+1. Click the ![image](../images/01_02_01_DSAR_Add_Stage_icon.png) button to add a new Stage called **Data Collection**.
 
 ![image](../images/01_02_03_DSAR_Data_Collection_Stage.png)
 
@@ -27,7 +27,7 @@ The sample Stages we will create include:
 
 ### File Generation
 
-1. Add a new Stage called **File Creation**. 
+1. Click the ![image](../images/01_02_01_DSAR_Add_Stage_icon.png) button to add a new Stage called **File Creation**. 
 
 ![image](../images/01_02_03_DSAR_File_Generation_Stage.png)
 
@@ -43,7 +43,7 @@ The sample Stages we will create include:
 
 ### Review and Approval
 
-1. Create a new Stage called **Review & Approval**. 
+1. Click the ![image](../images/01_02_01_DSAR_Add_Stage_icon.png) button to add a new Stage called **Review & Approval**. 
 
 ![image](../images/01_02_03_DSAR_Review_Approval_Stage.png)
 
@@ -76,7 +76,7 @@ Save the Case Owner Review task.
 
 ### 	Customer Notification
 
-1. Create a new Stage called **Customer Notification**. 
+1. Click the ![image](../images/01_02_01_DSAR_Add_Stage_icon.png) button to add a new Stage called **Customer Notification**. 
 
 ![image](../images/01_02_03_DSAR_Customer_Notification_Stage.png)
 

@@ -156,7 +156,37 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs, as 
 
 ### Globals
 
-- LU level [Globals](/articles/08_globals/01_globals_overview.md), populate the **ROOT_TABLE_NAME** Global using the main source table (one table is supported). For example: CUSTOMER. Populate the **ROOT_COLUMN_NAME** Global using the entity ID's column. These Globals are needed to set the IS_INSTANCE_ID column correctly in [TDM_SEQ_MAPPING](/articles/19_Broadway/actors/08_sequence_implementation_guide.md#sequence-mapping) TDM DB table.
+#### LU level [Globals](/articles/08_globals/01_globals_overview.md) 
+
+- Populate the **ROOT_TABLE_NAME** Global using the main source table or tables. You can populate several tables separated by a comma. 
+
+  Examples: 
+
+  - CUSTOMER. 
+  - CUSTOMER, ACCOUNT 
+
+- Populate the **ROOT_COLUMN_NAME** Global using the entity ID's column. These Globals are needed to set the IS_INSTANCE_ID column correctly in [TDM_SEQ_MAPPING](/articles/19_Broadway/actors/08_sequence_implementation_guide.md#sequence-mapping) TDM DB table. Note that the number and order of root column names must be aligned with the number and order of the tables, populated in **ROOT_TABLE_NAME**. 
+
+  Examples:
+
+  <table width="900pxl">
+  <tr>
+  <td><strong>ROOT_TABLE_NAME</strong></td>
+  <td><strong>ROOT_COLUMN_NAME</strong></td>
+  </tr>
+  <tr>
+  <td>CUSTOMER</td>
+  <td>CUSTOMER_ID</td>
+  </tr>
+  <tr>
+  <td>CUSTOMER, ACCOUNT</td>
+  <td>CUSTOMER_ID, CUSTOMER_ID</td>
+  </tr>
+  <tr>
+  <td>CUSTOMER, ACCOUNT_DATA</td>
+  <td>CUSTOMER_ID, ACC_CUST_ID</td>
+  </tr>  
+  </table>
 
 ### LU Tables
 

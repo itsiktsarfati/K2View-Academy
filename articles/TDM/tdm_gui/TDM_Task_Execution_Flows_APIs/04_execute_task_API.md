@@ -14,20 +14,94 @@ TDM_Tasks
 
 ### API Description
 
-Starts an execution of a given task and returns the execution's task_execution_id. 
+Validates the task execution and starts the execution of a given task and returns the execution's task_execution_id. 
+
+The task execution is validated whether the execution parameters are overridden or taken from the task itself.
+
+#### Validate the Task Execution Parameters
+
+- The connection details of the source and target environments of the task execution if the **forced** parameter is **false**.  
+- Do not enable an execution if another execution with the same execution parameters is already running on the task.
+- Validate the task's BE and LUs with the [TDM products](/articles/TDM/tdm_gui/11_environment_products_tab.md) of the task execution's source and target environment.
+- Verify that the user is permitted to execute the task on the task execution's source and target environment. For example, the user cannot run a [Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) with a [sequence replacement](/articles/TDM/tdm_gui/10_environment_roles_tab.md#replace-sequences) on environment X if the user does not have permissions to run such a task on this environment.
+
+If at least one of the validation fails, the API does not start the task and returns the validation errors.
+
+#### Start the Task Execution
+
+If the validations pass successfully, start the task execution by populating the following TDM DB tables:
+
+- [TASK_EXECUTION_LIST](/articles/TDM/tdm_architecture/02_tdm_database.md#task_execution_list) - populate the source and target environments by the task execution's environments:
+  - If the overriden parameters include the task execution envionments, get the execution environments from the overriden parameters. Else, get the execution environments from the [task record](/articles/TDM/tdm_gui/25_task_tdmdb_tables.md#environments-columns).
+- [TASK_EXECUTION_OVERRIDE_ATTRS](/articles/TDM/tdm_architecture/02_tdm_database.md#task_execution_override_attrs) -  populate the JSON of the overridden parameter by param name and param value pairs. For example- "SOURCE_ENVIRONMENT": "ST1"
 
 ### API Input
 
-- taskId
-- forced -  this parameter indicates if the execution should ignore a failure of the task's environment connections validation. If the 'forced' parameter is set to 'true', then the execution ignores the validation failure and executes the task. If the 'forced' parameter is set to 'false' and the environment validation fails, the execution is not initiated.
+- **taskId**
 
-### API Input Example
+- **forced** -  this parameter indicates if the execution should ignore a failure of the task's environment connections validation. If the **forced** parameter is set to **true**, then the execution ignores the validation failure and executes the task. If the **forced** parameter is set to **false** and the environment validation fails, the execution is not initiated.
+
+- An optional request body with overriden parameters for task execution. It is possible to populate all, part , or none of the overriden parameters.
+
+  ```json
+  {
+    "entitieslist": "string",
+    "sourceEnvironmentName": "string",
+    "targetEnvironmentName": "string",
+    "taskGlobals": {
+      "additionalProp1": "string",
+      "additionalProp2": "string",
+      "additionalProp3": "string"
+    },
+    "numberOfEntities": 0
+  }
+  ```
+
+  
+
+### API Input Examples
+
+#### API URL
 
 ```
 http://localhost:3213/api/task/55/forced/true/startTask
 ```
 
-### API Output Example
+#### Request Body Examples
+
+##### Example 1
+
+```json
+{
+	"entitieslist": "1,2,4,9,8,11",
+	"sourceEnvironmentName": "SRC1",
+	"targetEnvironmentName": "TAR1",
+	"taskGlobals": {
+	"MASKING_FLAG": "0",
+	"Customer.Global2": "value2"
+	}
+}
+```
+
+
+
+##### Example 2
+
+```json
+{
+	"sourceEnvironmentName": "SRC1",
+	"targetEnvironmentName": "TAR1",
+	"taskGlobals": {
+	"MASKING_FLAG": "0",
+	"Customer.Global2": "value2"
+	},
+ "numberOfEntities": 10
+}
+```
+
+
+
+### API Output Examples
 
 ```json
 {

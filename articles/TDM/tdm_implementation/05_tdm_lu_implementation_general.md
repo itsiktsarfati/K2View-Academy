@@ -46,7 +46,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 ### Step 3 - Add the Source LU Tables to the LU Schema
 
-1. Link the main source LU tables to the FABRIC_TDM_ROOT table. The main source tables represents the main (root) table in the data source. For example, the Customer table is the main source LU table of Customer LU.
+1. Link the main source LU tables to the FABRIC_TDM_ROOT table. The main source tables represents the main (root) table in the data source. For example, the Customer table is the main source LU table of the Customer LU.
 
 2. Verify that the the main source LU tables are also populated in [ROOT_TABLE_NAME and ROOT_COLUMN_NAME Globals](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#globals).
 
@@ -68,7 +68,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
      ![template](images/create_main_source_lu_flow_by_template.png)
 
-   4. The Broadway flow deletes and re-populates the main source LU table under the following conditions:
+4. The Broadway flow deletes and re-populates the main source LU table under the following conditions:
 
       - Running an [Extract task](/articles/TDM/tdm_gui/16_extract_task.md) or a [regular Load task](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode) (the Entity Versioning is false) which  loads (inserts) the entities to the target environment.
 
@@ -76,9 +76,9 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
         Click to view the [Override Sync Mode Summary Table](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution).
 
-   5. As  a result, if the Sync mode is set to **Do not sync** by the user, the task is a [delete only](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#delete-entity-without-load) task, or a [Data Flux load task](/articles/TDM/tdm_gui/15_data_flux_task.md)  the source LU tables are not populated by the LUI sync. 
+5. As  a result, if the Sync mode is set to **Do not sync** by the user, the task is a [delete only](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#delete-entity-without-load) task, or a [Data Flux load task](/articles/TDM/tdm_gui/15_data_flux_task.md)  the source LU tables are not populated by the LUI sync. 
 
-   6. The Broadway flow also validates if the entity exists in the source table. If the entity is not found in the main source tables, it throws an Exception and the entity is rejected.
+6. The Broadway flow also validates if the entity exists in the source table. If the entity is not found in the main source tables, it throws an Exception and the entity is rejected.
 
    See example of a Broadway flow that populates Customer LU table:
 
@@ -88,8 +88,8 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
    
 
-   7. Link the remaining source LU tables to the main LU tables so that if the main source LU table is not populated, the remaining source LU tables also remain empty.
-   8. Mask sensitive data in LU tables using a Broadway population and the [Masking Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md). 
+7. Link the remaining source LU tables to the main LU tables so that if the main source LU table is not populated, the remaining source LU tables also remain empty.
+8. Mask sensitive data in LU tables using a Broadway population and the [Masking Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md). 
 
    Click for more information about [TDM Masking](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-5---mask-the-sensitive-data).
 

@@ -8,20 +8,21 @@ The TDM DB  [tdm_general_parameters](/articles/TDM/tdm_architecture/02_tdm_datab
   - The **param_name** of the LUI separator is **iid_separator**.  
   - The **param_value** must be populated by the String set as a separator.  
 
-Note that the iid_separator setting impacts all LUs in a project.
-
-  
+  Note that the iid_separator setting impacts all LUs in a project.
 
   **Example**:
 
-Insert the following record to tdm_general_parameters to set the separator to @ : 
+  Insert the following record to tdm_general_parameters to set the separator to @ : 
 
-```sql
-insert into tdm_general_parameters (param_name, param_value) values ('iid_separator', '@');
-```
+  ```sql
+  insert into tdm_general_parameters (param_name, param_value) values ('iid_separator', '@');
+  ```
   
-The LUI of Customer 123_4 and environment ENV1 is **ENV1@123_4**.
+  The LUI of Customer 123_4 and environment ENV1 is **ENV1@123_4**.
 
-
+- [TDM GUI](/articles/TDM/tdm_gui/01_tdm_gui_overview.md) General Parameters: the param_value of the **tdm_gui_params** param_name is populated by a JSON with the names and values of the following parameters:
+  - maxRetentionPeriod: maximum number days when setting a [retention period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) on Extract tasks. Default value is 90 days.
+  - defaultPeriod: default retention period on Extract tasks. Detault value is 5 days ("unit":"Days","value":5).
+  - permissionGroups: list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner**, and **tester**.   
 
 [![Previous](/articles/images/Previous.png)](01_tdm_installation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_tdm_fabric_credentials.md)

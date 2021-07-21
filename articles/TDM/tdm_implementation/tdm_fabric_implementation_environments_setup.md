@@ -29,7 +29,11 @@ Click for more information about the [TDM LUI format](01_tdm_set_instance_per_en
 
 The TDM implementation must include the **creation and deployment** of all the TDM environments with their connection details to enable the execution of the TDM tasks. 
 
-Note that **every change of a Global or an Interface in the project requires a redeployment of the environments** to Fabric to be aligned with the updated project's Interfaces and Globals.
+
+Notes:
+- **Every change of a Global or an Interface in the project requires a redeployment of the environments** to Fabric to be aligned with the updated project's Interfaces and Globals.
+- It is important to **set this interface as disabled in the Environments** to avoid an error when running the test connection on the task's environment (Fabric server has a different IP address than the local windows machine and cannot connect window's directory)
+
 
 Click for more information about [Fabric environments](/articles/25_environments/02_create_new_environment.md).
 

@@ -103,6 +103,27 @@ http://localhost:3213/api/task/55/forced/true/startTask
 
 ### API Output Examples
 
+#### Validation Failure Example
+
+```json
+{
+    "result":[{"Number of entity":"The number of entities exceeds the number of entities in the write permission","selectionMethod":"The User has no permissions to run the task's selection method on the task's target environment"}],
+    "errorCode":"FAIL","message":"validation failure"
+}
+```
+
+#### The Test Connection of the Task's Environment Fails
+
+The test connection runs when the **forced** input parameter is set to **false**.
+
+```json
+{"errorCode":"FAIL","message":"The test connection of [TDM_APIDOC_JSON] failed. Please check the connection details of target environment TAR"}
+```
+
+
+
+#### Successfull Execution Example
+
 ```json
 {
   "result": {

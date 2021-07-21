@@ -103,21 +103,36 @@ http://localhost:3213/api/task/55/forced/true/startTask
 
 ### API Output Examples
 
-#### Validation Failure Example
+#### Validation Failure Examples
 
 ```json
 {
     "result":[{"Number of entity":"The number of entities exceeds the number of entities in the write permission","selectionMethod":"The User has no permissions to run the task's selection method on the task's target environment"}],
-    "errorCode":"FAIL","message":"validation failure"
+    "errorCode":"FAIL",
+    "message":"validation failure"
 }
 ```
+
+
+
+```json
+{ 
+    "result": 
+    [{"reference": "The user has no permissions to run tasks on Reference tables on source environment", 
+      "syncMode": "the user has no permissions to ask to always sync the data from the source."    } ], 
+    "errorCode": "FAIL",
+    "message": "validation failure"
+} 
+```
+
+
 
 #### The Test Connection of the Task's Environment Fails
 
 The test connection runs when the **forced** input parameter is set to **false**.
 
 ```json
-{"errorCode":"FAIL","message":"The test connection of [TDM_APIDOC_JSON] failed. Please check the connection details of target environment TAR"}
+{"errorCode":"FAIL","message":"The test connection of [CRM_DB] failed. Please check the connection details of target environment TAR"}
 ```
 
 

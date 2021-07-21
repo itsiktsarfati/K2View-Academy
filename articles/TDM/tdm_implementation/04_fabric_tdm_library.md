@@ -24,6 +24,8 @@ Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_inter
 -  **FabricRedis**, the [Redis interface](/articles/24_non_DB_interfaces/09_redis_interface.md) that connects to the environment's **Redis** storage. The Redis interface can be used for the [sequence implementation](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences). Edit the IP address and populate it with the IP address of the TDM server. 
 -  **TDM_APIDOC_JSON**, a Local File System interface to generate the JSON file of the TDM APIDOC if it needs to be updated to include project custom APIs.
     Click for more information about [updating the TDM APIDOC](/articles/TDM/tdm_configuration/01_tdm_installation.md#update-the-tdm-apidoc-optional).
+    
+    Note that it is important to **set this interface as disabled in the Environments** to avoid an error when running the test connection on the task's environment (Fabric server has a different IP address than the local windows machine and cannot connect window's directory).
 
 ### Shared Globals
 

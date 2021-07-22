@@ -289,7 +289,7 @@ When executing a TDM task, set the Sync mode according to the following table:
 
 # Overriding Additional Task Execution Parameters
 
-The TDM API that [starts a task execution](/articles/TDM/tdm_gui/TDM_Basic_Task_Execution_APIs_Flow/04_execute_task_API.md) can get a list of parameter-value pairs to **override the original values** of these parameters on the task execution **without changing the task data**. 
+The TDM API that [starts a task execution](/tdm_gui/TDM_Task_Execution_Flows_APIs/04_execute_task_API.md) can get a list of parameter-value pairs to **override the original values** of these parameters on the task execution **without changing the task data**. 
 
 This way, various of users can **use a task as a template** and change (override) the execution parameters without changing the task itself: each user can run the task on their environment and update the execution parameter based on their needs.
 

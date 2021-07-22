@@ -2,7 +2,7 @@
 
 ### API URL
 
-/get_getEnvironmentsForTaskAttr
+/getEnvironmentsForTaskAttr
 
 ### HTTP Method
 

@@ -25,7 +25,7 @@ The task execution is validated whether the execution parameters are overridden 
 - Validate the task's BE and LUs with the [TDM products](/articles/TDM/tdm_gui/11_environment_products_tab.md) of the task execution's source and target environment.
 - Verify that the user is permitted to execute the task on the task execution's source and target environment. For example, the user cannot run a [Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) with a [sequence replacement](/articles/TDM/tdm_gui/10_environment_roles_tab.md#replace-sequences) on environment X if the user does not have permissions to run such a task on this environment.
 
-If at least one of the validation fails, the API does not start the task and returns the validation errors.
+If at least one of the validations fail, the API does not start the task and returns the validation errors.
 
 #### Start the Task Execution
 

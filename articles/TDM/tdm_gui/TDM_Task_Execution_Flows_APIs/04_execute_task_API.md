@@ -20,12 +20,22 @@ The task execution is validated whether the execution parameters are overridden 
 
 #### Validate the Task Execution Parameters
 
-- The connection details of the source and target environments of the task execution if the **forced** parameter is **false**.  
+- Test the connection details of the source and target environments of the task execution if the **forced** parameter is **false**.  
 - Do not enable an execution if another execution with the same execution parameters is already running on the task.
 - Validate the task's BE and LUs with the [TDM products](/articles/TDM/tdm_gui/11_environment_products_tab.md) of the task execution's source and target environment.
 - Verify that the user is permitted to execute the task on the task execution's source and target environment. For example, the user cannot run a [Load task](/articles/TDM/tdm_gui/17_load_task_regular_mode.md) with a [sequence replacement](/articles/TDM/tdm_gui/10_environment_roles_tab.md#replace-sequences) on environment X if the user does not have permissions to run such a task on this environment.
 
 If at least one of the validations fail, the API does not start the task and returns the validation errors.
+
+Below is the list of the validation codes, returned by the API:
+
+- BEandLUs
+- Reference
+- selectionMethod
+- Versioning
+- ReplaceSequence
+- DeleteBeforeLoad
+- syncMode
 
 #### Start the Task Execution
 

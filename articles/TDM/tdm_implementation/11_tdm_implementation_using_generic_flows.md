@@ -119,6 +119,8 @@ TDM systems often handle sensitive data. To be compliant with Data Privacy laws,
 
   ![image](images/11_tdm_impl_05.PNG)
 
+  If the masked field is used as an [input argument](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md) that is linked to another LU table, it is recommended to add the masking population that masks the fields in all LU tables, to the last executed LU table in order to have the original value when populating the LU tables. 
+  
 * To mask a sensitive field as part of Load to the Target DB, add a Masking Actor to the relevant **load_[Table Name].flow**. The TDM infrastructure controls enabling or disabling masking based on the settings of the global variables. There are three possible scenarios for handling masking:
 
   * When the TDM task is for synthetic data creation, masking is always enabled.

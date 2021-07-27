@@ -148,7 +148,9 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>task_execution_override_attrs</td>
-<td>List of execution parameters like environments or Globals to be overridden on given task execution.The list of the overridden parameters is concatenated into a JSON and populated in override_parameters column. For example: {"SOURCE_ENVIRONMENT_NAME":"ENV3","TARGET_ENVIRONMENT_NAME":"ENV3"}</td> 
+<td>List of execution parameters like environments or Globals to be overridden on given task execution.</p>
+   <p>The list of the overridden parameters is concatenated into a JSON file and populated in the override_parameters column. </p>
+   <p>For example: {"SOURCE_ENVIRONMENT_NAME":"ENV3","TARGET_ENVIRONMENT_NAME":"ENV3"}</td> 
 <td>Task Execution</td>        
 </tr>
 <tr>

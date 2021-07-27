@@ -20,7 +20,7 @@ Gets the list of all Global variables defined in the Fabric project except the T
 
 ### API Input
 
-- lus  -  this is an optional input. Can be populated by one or several LU names, separated by a comma. 
+- **lus**  -  this is an optional input. Can be populated by one or several LU names, separated by a comma. 
 
 Note that the list of the task's LUs is returned by [/task/{taskId}/logicalunits](/articles/TDM/tdm_gui/TDM_Task_Execution_Flows_APIs/03_get_task_details_APIs.md#get-the-tasks-logical-units-list) API.
 

@@ -137,7 +137,7 @@ The test connection runs when the **forced** input parameter is set to **false**
 
 
 
-#### Successfull Execution Example
+#### Successful Execution Example
 
 ```json
 {

@@ -51,7 +51,7 @@ If the validations pass successfully, start the task execution by populating the
 
 - **forced** -  this parameter indicates if the execution should ignore a failure of the task's environment connections validation. If the **forced** parameter is set to **true**, then the execution ignores the validation failure and executes the task. If the **forced** parameter is set to **false** and the environment validation fails, the execution is not initiated.
 
-- An optional request body with overriden parameters for task execution. It is possible to populate all, part , or none of the overriden parameters.
+- **request body** - this is optional, and has overriden parameters for task execution. It is possible to populate all, part , or none of the overriden parameters.
 
   ```json
   {

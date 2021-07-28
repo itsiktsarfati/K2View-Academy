@@ -97,7 +97,7 @@ The JSON filtering parameter is optional. If is it not populated, the API return
    ```
   
   ```json
-  {"task_type":"EXTRACT", "version_ind":true, "load_entity":false, "delete_before_load":false, "selection_method":"L", "sync_mode":"OFF"}
+  {"task_type":"EXTRACT", "version_ind":true, "load_entity":false, "delete_before_load":false, "selection_method":"L", "sync_mode":"FORCE"}
   ```
   
   ### API Output Example

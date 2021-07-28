@@ -18,7 +18,7 @@ Gets the list of regular active tasks (task_status and task_execution_status col
 
 - **Admin Users:**
   
-- Get all active tasks.
+  - Get all active tasks.
   
 - **Owner Users:**
   - Get all active extract tasks if the user is the owner of at least one source environment.

@@ -14,7 +14,13 @@ TDM_Tasks
 
 ### API Description
 
-Validates the task execution and starts the execution of a given task and returns the execution's task_execution_id. 
+Starts a task execution and return the execution's task_execution_id on success. The API can get an optional input of overriden parameters for the task execution.
+The following parameters can be set:
+- **entitieslist**: populated by a list of entities separated by a comma
+- **sourceEnvironmentName**: source environment name
+- **targetEnvironmentName**: target environment name 
+- **taskGlobals**: list of Global variables and their values. 
+- **numberOfEntities**: populated by a number to change the number of entities processed by the task. This parameter is only relevant for Load tasks when the **entitylist** override parameter is not set.
 
 The task execution is validated whether the execution parameters are overridden or taken from the task itself.
 
@@ -51,7 +57,7 @@ If the validations pass successfully, start the task execution by populating the
 
 - **forced** -  this parameter indicates if the execution should ignore a failure of the task's environment connections validation. If the **forced** parameter is set to **true**, then the execution ignores the validation failure and executes the task. If the **forced** parameter is set to **false** and the environment validation fails, the execution is not initiated.
 
-- **request body** - this is optional, and has overriden parameters for task execution. It is possible to populate all, part , or none of the overriden parameters.
+- An optional request body with overriden parameters for task execution. It is possible to populate all, part , or none of the overriden parameters.
 
   ```json
   {

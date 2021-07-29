@@ -304,13 +304,13 @@ TDM 7.2 supports the override of the following parameters:
 
 - [Entity List](/articles/TDM/tdm_gui/18_load_task_requested_entities_regular_mode.md#entities-list) : provide a list of entities separated by a comma instead of the task's entity list. Note that the Entity List can only contain one entity ID when executing a task with a Synthetic selection method. 
 - [Selection  Method](/articles/TDM/tdm_gui/25_task_tdmdb_tables.md#requested-entities-columns) : set the overridden selection method to 'L' (Entity List), when overriding the task's Entity List, except for a task with a Synthetic selection method. It is possible to provide a single entity in the Entity List to clone the entity by the task with the Synthetic selection method.
-- [Number of Entities](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#number-of-entities) : change the number of entities to be processed by the task execution. This parameter is only relevant for Load tasks when the entitylist override parameter is not set.
+- [Number of Entities](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#number-of-entities) : change the number of entities to be processed by the task execution. This parameter is only relevant for Load tasks when the **entitylist** override parameter is not set.
 
-Note that the TDM supports overriding the task execution parameters only when invoking the start task execution API outside the TDM GUI. **Currently this option is not supported when executing the task using the TDM GUI.**
+Note that TDM supports overriding the task execution parameters only when invoking the start task execution API outside the TDM GUI. **Currently this option is not supported when executing the task using the TDM GUI.**
 
 ### Validate the Task Execution Parameters
 
-The API validates the overridden parameters with the user's permissions on the task's environments:
+This API validates the overridden parameters with the user's permissions on the task's environments:
 
 - Overrides the source and/or target environments: check the user's permissions on the new environments and verify that the user has permissions to run the task on the environments.
 - The task's environments are not overridden: check the user's permissions on the task's environments  and verify that the user has permissions to run the task on the environments.

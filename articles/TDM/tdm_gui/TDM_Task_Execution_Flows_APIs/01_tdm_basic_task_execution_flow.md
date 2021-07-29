@@ -14,5 +14,5 @@ Click the blue text to open the articles about the related TDM APIs of each step
 
 [<img src="images/task_basic_flow_6.png" alt="drawing" width="200pxl" style="zoom:80%;" />](06_get_task_execution_details_APIs.md) Send the task_execution_id returned by the execute task API.
 
-[<img src="images/task_basic_flow_7.png" alt="drawing" width="200pxl" style="zoom:80%;" />](07_get_task_execution_reports_APIs.md) Send the task_execution_id returned by the execute task API.
+[<img src="images/task_basic_flow_7.png" alt="drawing" width="200pxl" style="zoom:80%;" />](07_get_task_execution_reports_APIs.md) Send the task_execution_id returned by the execute task API.  
 

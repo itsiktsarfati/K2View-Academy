@@ -2,9 +2,9 @@
 
 The TDM Library has all the utilities required to implement a TDM project and to run TDM execution processes.  It holds the following:
 
-- [Shared Objects](#tdm-library---shared-objects).
-- [TDM LU](#tdm-lu).
-- [TDM_LIBRARY LU](#tdm_library-lu).
+- [Shared Objects](#tdm-library---shared-objects)
+- [TDM LU](#tdm-lu)
+- [TDM_LIBRARY LU](#tdm_library-lu)
 
 Note that the TDM Library must be imported to the Fabric project created for TDM. Download the TDM library from [this link](TDM_V7.1.1_LIBRARY.k2export) .
 
@@ -12,20 +12,20 @@ Note that the TDM Library must be imported to the Fabric project created for TDM
 
 ### TDM Web Services
 
-Import and deploy all TDM Web Services to Fabric projects. These APIs are invoked by the TDM GUI application and comprise the backend layer of the TDM GUI application.
+It is possible to import and deploy all TDM Web Services to Fabric projects, using appropriate APIs. These APIs are invoked by the TDM GUI application and comprise the backend layer of the TDM GUI application.
 
 Since the TDM categories contain the product's Web Services, it is recommended to add the project's Web Services into separate categories to simplify upgrading the TDM version.
 
 ### Generic TDM Interfaces
 
 Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) into the project's **Shared Objects**:
--  **DB_CASSANDRA**, the connection to the Cassandra DB.  This interface is used by TDM utilities. Edit the IP address according to the environment.
--  **TDM**, the connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Edit the IP address according to the environment.
--  **FabricRedis**, the [Redis interface](/articles/24_non_DB_interfaces/09_redis_interface.md) that connects to the environment's **Redis** storage. The Redis interface can be used for the [sequence implementation](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences). Edit the IP address and populate it with the IP address of the TDM server. 
--  **TDM_APIDOC_JSON**, a Local File System interface to generate the JSON file of the TDM APIDOC if it needs to be updated to include project custom APIs.
-    Click for more information about [updating the TDM APIDOC](/articles/TDM/tdm_configuration/01_tdm_installation.md#update-the-tdm-apidoc-optional).
+-  **DB_CASSANDRA**: This is the connection to the Cassandra DB.  This interface is used by TDM utilities. Edit the IP address according to the environment.
+-  **TDM**: This is the connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Edit the IP address according to the environment.
+-  **FabricRedis**: This is the [Redis interface](/articles/24_non_DB_interfaces/09_redis_interface.md) that connects to the environment's **Redis** storage. The Redis interface can be used for the [sequence implementation](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences). Edit the IP address and populate it with the IP address of the TDM server. 
+-  **TDM_APIDOC_JSON**: This is a local file system interface used to generate the JSON file of the TDM APIDOC if the APIDOC needs to be updated to include project custom APIs.
+    [Click here](/articles/TDM/tdm_configuration/01_tdm_installation.md#update-the-tdm-apidoc-optional) for more information about updating the TDM APIDOC.
     
-    Note that it is important to **set this interface as disabled in the Environments** to avoid an error when running the test connection on the task's environment (Fabric server has a different IP address than the local windows machine and cannot connect window's directory).
+    Note that it is important to **set this interface as *disabled* in the Environments** to avoid an error when running the test connection on the task's environment (Fabric server has a different IP address than the local windows machine and cannot connect window's directory).
 
 ### Shared Globals
 

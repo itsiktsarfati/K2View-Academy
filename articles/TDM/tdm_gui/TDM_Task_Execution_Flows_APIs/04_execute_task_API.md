@@ -16,7 +16,7 @@ TDM_Tasks
 
 Starts a task execution and return the execution's task_execution_id on success. The API can get an optional input of overriden parameters for the task execution.
 The following parameters can be set:
-- **entitieslist**: populated by a list of entities separated by a comma
+- **entitieslist**: populated by a list of entities separated by a comma. Note that the entity list can only contain one entity ID when executing a task with a Synthetic selection method.
 - **sourceEnvironmentName**: source environment name
 - **targetEnvironmentName**: target environment name 
 - **taskGlobals**: list of Global variables and their values. 

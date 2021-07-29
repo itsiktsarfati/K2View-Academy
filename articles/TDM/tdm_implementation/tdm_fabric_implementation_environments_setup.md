@@ -2,12 +2,10 @@
 
 During the execution of a TDM task, data is extracted from a selected source environment and loaded into the selected target environment.
 
-TDM environments must be defined in the following components:
+TDM environments must be defined in Fabric. Make sure that you define the TDM environment source and target and connection details of each environment. 
 
-- Fabric: Here, you must define the TDM environment source and target and connection details of each environment. 
-- TDM GUI: Here, you must define the TDM environment types, related products (systems), roles and permissions and additional settings. These definitions are kept in the [TDM DB](/articles/TDM/tdm_architecture/02_tdm_database.md).
+Note: You must also define the TDM environments in the TDM GUI. [Click here](/articles/TDM/tdm_gui/07_tdm_gui_environment_overview.md) for more information on doing this.  
 
-An environment can be defined as a source environment, target environment or both source and target environments.
 
 ### Defining TDM Environments in Fabric
 
@@ -26,13 +24,11 @@ Fabric environments are used to run TDM processes on various environments by swi
 
    [Click here](01_tdm_set_instance_per_env_and_version.md) for more information about the TDM LUI format. 
 
-### TDM GUI
-
 The TDM implementation must include the **creation and deployment** of all the TDM environments with their connection details to enable the execution of the TDM tasks. 
 
 Notes:
 - **Every change of a Global or an Interface in the project requires a redeployment of the environments** to Fabric to be aligned with the updated project's Interfaces and Globals.
-- It is important to **set this interface as disabled in the Environments** to avoid an error when running the test connection on the task's environment (Fabric server has a different IP address than the local windows machine and cannot connect window's directory)
+- It is important to **set the TDM_APIDOC_JSON local file system interface as disabled in the Environments** to avoid an error when running the test connection on the task's environment (Fabric server has a different IP address than the local windows machine and cannot connect window's directory)
 
 
 [Click here](/articles/25_environments/02_create_new_environment.md) for more information about Fabric environments.

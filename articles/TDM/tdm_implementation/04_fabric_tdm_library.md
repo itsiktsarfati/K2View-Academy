@@ -25,7 +25,7 @@ Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_inter
 -  **TDM_APIDOC_JSON**: This is a local file system interface used to generate the JSON file of the TDM APIDOC if the APIDOC needs to be updated to include project custom APIs.
     [Click here](/articles/TDM/tdm_configuration/01_tdm_installation.md#update-the-tdm-apidoc-optional) for more information about updating the TDM APIDOC.
     
-    Note that it is important to **set this interface as *disabled* in the Environments** to avoid an error when running the test connection on the task's environment (Fabric server has a different IP address than the local windows machine and cannot connect window's directory).
+    Note that it is important to **set the TDM_APIDOC_JSON interface as *disabled* in the Environments** to avoid an error when running the test connection on the task's environment (Fabric server has a different IP address than the local windows machine and cannot connect window's directory).
 
 ### Shared Globals
 

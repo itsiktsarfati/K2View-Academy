@@ -14,7 +14,7 @@ custom_TDM_Tasks
 
 ### API Description
 
-Gets the list of regular active tasks (task_status and task_execution_status columns are active) for a user based on the user's permission group (admin, owner, or tester) and based on the user's TDM environment roles:
+Gets the list of regular active tasks (version_ind is 'false', task_status and task_execution_status columns are 'Active') for a user based on the user's permission group (admin, owner, or tester) and based on the user's TDM environment roles:
 
 - **Admin Users:**
   

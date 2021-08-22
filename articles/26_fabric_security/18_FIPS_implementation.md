@@ -12,7 +12,7 @@ K2View has implemented the [Bouncycastle](https://www.bouncycastle.org/index.htm
 By default, Fabric works in FIPS mode off. Yet, even when FIPS mode is switched off, Fabric only uses FIPS-compliant modules.
 Protocols and standards embedded in Fabric encryption algorithm
 
-### Works with FIPS mode on.
+### FIPS with mode set to **ON**
 
 ```fabric>version fips;```
 
@@ -44,7 +44,7 @@ Protocols and standards embedded in Fabric encryption algorithm
 (20 rows)
 ```
 
-### Works with FIPS mode off
+### FIPS with mode set to **STRICT**
 
 ```fabric>version fips;```
 
@@ -76,8 +76,6 @@ Protocols and standards embedded in Fabric encryption algorithm
 |SecureRandom                 |BCFIPS                                                          |passed|
 
 (23 rows)
-fabric>
- 
  ```
 
 

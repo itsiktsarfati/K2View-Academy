@@ -75,12 +75,10 @@ Protocols and standards embedded in Fabric encryption algorithm
 |SSL Context                  |BCJSSE                                                          |passed|
 |SecureRandom                 |BCFIPS                                                          |passed|
 
-```
- 
-
 (23 rows)
 fabric>
  
+ ```
 
 
 

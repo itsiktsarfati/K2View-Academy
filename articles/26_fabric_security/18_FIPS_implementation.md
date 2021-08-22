@@ -8,11 +8,20 @@ In particular, FIPS 140-2 (Federal Information Processing Standard 140-2) is a s
 
 ## Fabric and FIPS
 
-K2View has implemented the [Bouncycastle](https://www.bouncycastle.org/index.html) Java stack for FIPS.
+K2View has integrated the [Bouncycastle](https://www.bouncycastle.org/index.html) Java stack to ensure FIPS-compliance for all [Fabric cryptographic algorithms](/articles/26_fabric_security/03_fabric_LUI_encryption.md).
 By default, Fabric works in FIPS mode off. Yet, even when FIPS mode is switched off, Fabric only uses FIPS-compliant modules.
 Protocols and standards embedded in Fabric encryption algorithm
 
 ### FIPS with mode set to **ON**
+
+To switch on FIPS mode, do the following steps:
+- Go to the **$K2_HOME/config/** directory,
+- Open the **modules.ini** file
+- Modify the fips entry to reflect the following value: ```fips:mode=on```
+
+Fabric needs to be restarted for this change to be validated. This can be achieved by clicking on the server start/stop button on the top-left menu of the Fabric Studio. 
+
+Once re-started, start a Fabric Console CLI window and execute the following command: 
 
 ```fabric>version fips;```
 
@@ -49,6 +58,16 @@ Note that:
 - BCJSSE means that the Java Secure Socket Extension (JSSE) from Bouncy Castle is used.
 
 ### FIPS with mode set to **STRICT**
+
+To switch on FIPS mode, do the following steps:
+- Go to the **$K2_HOME/config/** directory,
+- Open the **modules.ini** file
+- Modify the fips entry to reflect the following value: ```fips:mode=strict```
+
+Fabric needs to be restarted for this change to be validated. This can be achieved by clicking on the server start/stop button on the top-left menu of the Fabric Studio. 
+
+Once re-started, start a Fabric Console CLI window and execute the following command: 
+
 
 ```fabric>version fips;```
 

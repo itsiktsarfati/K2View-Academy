@@ -44,6 +44,10 @@ Protocols and standards embedded in Fabric encryption algorithm
 (20 rows)
 ```
 
+Note that:
+- BCFIPS means that the algorithm is provided via the jar file bc-fips-1.0.1.jar
+- BCJSSE means that the Java Secure Socket Extension (JSSE) from Bouncy Castle is used.
+
 ### FIPS with mode set to **STRICT**
 
 ```fabric>version fips;```

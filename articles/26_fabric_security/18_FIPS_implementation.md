@@ -14,6 +14,11 @@ By default, Fabric boots up with FIPS mode set to **off**.
 Yet, even in this mode, Fabric only uses FIPS-compliant protocols and standards implementions with Fabric cryptographic embedded algorithms.
 
 
+### FIPS Verification Command
+
+Fabric's command ```version fips``` returns the FIPS version currently used and the status of all the cryptographics components included in the system. All java jars are checked validated or rejected    
+
+
 ### FIPS with mode set to **ON**
 
 To switch on FIPS mode, do the following steps:
@@ -21,7 +26,8 @@ To switch on FIPS mode, do the following steps:
 - Open the **modules.ini** file
 - Modify the fips entry to reflect the following value: ```fips:mode=on```
 
-Fabric needs to be restarted for this change to be validated. This can be achieved by clicking on the server start/stop button on the top-left menu of the Fabric Studio. 
+Fabric's server needs to be restarted for this change to be validated. 
+This can be achieved by clicking on the server start/stop button on the top-left menu of the Fabric Studio. 
 
 Once re-started, start a Fabric Console CLI window and execute the following command: 
 
